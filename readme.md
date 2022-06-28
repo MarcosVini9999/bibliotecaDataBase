@@ -1,6 +1,10 @@
 # **TRABALHO FINAL - BANCO DE DADOS**
 ## STATUS DO PROJETO
 
+Submeter grupo e incluir professor:
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
+
 Modelagem e scripts:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
