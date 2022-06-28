@@ -1,6 +1,10 @@
 # **TRABALHO FINAL - BANCO DE DADOS**
 ## STATUS DO PROJETO
 
+Modelagem e scripts:
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
+
 Desenho das telas:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
