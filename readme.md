@@ -9,7 +9,7 @@ Modelagem e scripts:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
 
-Desenho das telas:
+Implementações Finais:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
