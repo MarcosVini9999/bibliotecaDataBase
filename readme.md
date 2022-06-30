@@ -1,4 +1,5 @@
 # **TRABALHO FINAL - BANCO DE DADOS**
+
 ## STATUS DO PROJETO
 
 Submeter grupo e incluir professor:
@@ -12,6 +13,7 @@ Modelagem e scripts:
 Implementações Finais:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
+
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
 
 ## 🌎Descrição Geral:
