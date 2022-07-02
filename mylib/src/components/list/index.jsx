@@ -18,13 +18,10 @@ function List({ list }) {
                     <AccordionDetails>
                         <Typography>
                             <div>
-                                <p>Autor:{book.author}</p>
-                                <p>ISBN::{book.ISBN}</p>
-                                <p>Ano de Lançamento:{book.ano_lançamento}</p>
-                                <p>Editora:{book.editora}</p>
-                                <p>Cópias:{book.qtd_copias}</p>
-                                <p>Categoria:{book.categoria}</p>
-                                <p>Descrição:{book.descricao}</p>
+                                <p>Autor: {book.nome}</p>
+                                <p>Ano de Lançamento: {book.ano_lacamento}</p>
+                                <p>Editora: {book.editora}</p>
+                                <p>Descrição: {book.descricao}</p>
                             </div>
                         </Typography>
                     </AccordionDetails>
