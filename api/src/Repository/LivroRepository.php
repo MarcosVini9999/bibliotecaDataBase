@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Livro;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Exception;
 
 /**
  * @extends ServiceEntityRepository<Livro>
@@ -44,5 +45,21 @@ class LivroRepository extends ServiceEntityRepository
         $resultSet = $stmt->executeQuery(['isbn' => $isbn]);
 
         return $resultSet->fetchAssociative();
+    }
+
+    function store($livro)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+        $erros = '';
+        $sql = 'INSERT 
+                    INTO 
+                        livros (isbn, titulo, ano_lancamento, editora, qtd_copias, categorias_cod_categoria) 
+                VALUES 
+                    (:isbn, :titulo, :ano_lancamento, :editora, :qtd_copias, :categorias_cod_categoria)';
+        $stmt = $conn->prepare($sql);
+        if (!$stmt->executeQuery($livro)) {
+            throw new Exception('Não foi possível cadastrar');
+        }
+        return true;
     }
 }
