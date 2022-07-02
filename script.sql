@@ -354,11 +354,11 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mydb`;
-INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (1, 'Cálculo Vol1', '2000', 'trilha', 20, 1);
-INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (2, 'Física Vol 1', '2000', 'ltc', 20, 2);
-INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (3, 'Padrões de projeto', '2008', 'bookman', 20, 3);
-INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (4, 'Comunicação de dados e redes de computadores', '2008', 'bookman', 20, 4);
-INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (5, 'Criação de Sites na era da Web 2.0', '2011', 'brasport', 20, 5);
+INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (1, 'Cálculo Vol1', '2000-06-16', 'trilha', 20, 1);
+INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (2, 'Física Vol 1', '2000-06-16', 'ltc', 20, 2);
+INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (3, 'Padrões de projeto', '2000-06-16', 'bookman', 20, 3);
+INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (4, 'Comunicação de dados e redes de computadores', '2000-06-16', 'bookman', 20, 4);
+INSERT INTO `mydb`.`livros` (`isbn`, `titulo`, `ano_lancamento`, `editora`, `qtd_copias`, `categorias_cod_categoria`) VALUES (5, 'Criação de Sites na era da Web 2.0', '2000-06-16', 'brasport', 20, 5);
 
 COMMIT;
 
