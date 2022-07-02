@@ -19,7 +19,7 @@ function List({ list }) {
                         <Typography>
                             <div>
                                 <p>Autor: {book.nome}</p>
-                                <p>Ano de Lançamento: {book.ano_lacamento}</p>
+                                <p>Ano de Lançamento: {book.ano_lancamento}</p>
                                 <p>Editora: {book.editora}</p>
                                 <p>Descrição: {book.descricao}</p>
                             </div>
