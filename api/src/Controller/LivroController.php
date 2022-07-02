@@ -45,11 +45,11 @@ class LivroController extends AbstractController
     $repository = $this->getDoctrine()->getRepository(Livro::class);
     $data = json_decode($request->getContent());
     $livro = [
-      'isbn'                    => $data->isbn,
-      'titulo'                  => $data->titulo,
-      'ano_lancamento'          => $data->ano_lancamento,
-      'editora'                 => $data->editora,
-      'qtd_copias'              => $data->qtd_copias,
+      'isbn'                     => $data->isbn,
+      'titulo'                   => $data->titulo,
+      'ano_lancamento'           => $data->ano_lancamento,
+      'editora'                  => $data->editora,
+      'qtd_copias'               => $data->qtd_copias,
       'categorias_cod_categoria' => $data->categorias_cod_categoria,
     ];
 

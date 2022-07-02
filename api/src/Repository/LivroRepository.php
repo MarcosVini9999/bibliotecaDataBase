@@ -22,7 +22,7 @@ class LivroRepository extends ServiceEntityRepository
         parent::__construct($registry, Livro::class);
     }
 
-    public function getAll($value)
+    public function getAll($value = '')
     {
         $conn = $this->getEntityManager()->getConnection();
 
