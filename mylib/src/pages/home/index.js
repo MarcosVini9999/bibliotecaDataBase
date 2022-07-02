@@ -9,18 +9,16 @@ function Home() {
   const [term, setTerm] = useState("");
   const fetchData = async () => {
     try {
-      const result = await api.get(`${term}`);
-      setList(result.data.hits);
+      const result = await api.get(`/livros?query=${term}`);
+      setList(result.data);
     } catch {
       setList([]);
     }
   };
-  /* 
   useEffect(() => {
     fetchData();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  */
   return (
     <>
       <Link exact to="/">
