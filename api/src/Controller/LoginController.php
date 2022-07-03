@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class LoginController extends AbstractController
 {
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/login", methods={"POST"})
      */
     public function index(Request $request): JsonResponse
     {

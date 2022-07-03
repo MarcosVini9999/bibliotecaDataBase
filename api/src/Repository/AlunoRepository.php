@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Aluno;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Exception;
 
 /**
  * @extends ServiceEntityRepository<Aluno>
@@ -21,46 +22,46 @@ class AlunoRepository extends ServiceEntityRepository
         parent::__construct($registry, Aluno::class);
     }
 
-    public function add(Aluno $entity, bool $flush = false): void
+    public function salvarAluno($data)
     {
-        $this->getEntityManager()->persist($entity);
+        $conn = $this->getEntityManager()->getConnection();
 
-        if ($flush) {
-            $this->getEntityManager()->flush();
+        try {
+            $conn->beginTransaction();
+
+            $sql = "
+        INSERT 
+            INTO 
+                usuarios(nome, endereco, login, senha, tipo_usuario) 
+            VALUES (:nome, :endereco, :email, :senha, :tipo_usuario)";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->executeQuery([
+                'nome' => $data->nome,
+                'endereco' => $data->endereco,
+                'email' => $data->email,
+                'senha' => $data->senha,
+                'tipo_usuario' => $data->tipo_usuario
+            ]);
+
+            $sql = "INSERT 
+            INTO 
+                alunos(matricula, data_de_ingresso, data_de_conclusao_prevista, usuarios_id, cursos_cod_curso) 
+            VALUES (:matricula, :data_de_ingresso, :data_de_conclusao_prevista, LAST_INSERT_ID(), :cursos_cod_curso)";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->executeQuery([
+                'matricula'                  => $data->matricula,
+                'data_de_ingresso'           => $data->data_de_ingresso,
+                'data_de_conclusao_prevista' => $data->data_de_conclusao_prevista,
+                'cursos_cod_curso'           => $data->cursos_cod_curso,
+            ]);
+            // do stuff
+            $conn->commit();
+        } catch (\Exception $e) {
+            $conn->rollBack();
+            throw $e;
         }
+        return true;
     }
-
-    public function remove(Aluno $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->remove($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
-//    /**
-//     * @return Aluno[] Returns an array of Aluno objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('a')
-//            ->andWhere('a.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('a.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
-
-//    public function findOneBySomeField($value): ?Aluno
-//    {
-//        return $this->createQueryBuilder('a')
-//            ->andWhere('a.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
 }
