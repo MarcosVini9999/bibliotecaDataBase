@@ -24,6 +24,10 @@ Back End
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
 
+Slide de apresentação:
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO%2C%20AGUARDANDO%20APROVAÇÃO-yellowgreen)
+
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
 
 ## 🌎Descrição Geral:
