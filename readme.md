@@ -10,9 +10,27 @@ Modelagem e scripts:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
 
+Parte 1 do projeto:
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-ENVIADO-brightgreen)
+
 Implementações Finais:
 
+Front End
+
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
+
+Back End
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
+
+Slide de apresentação:
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO%2C%20AGUARDANDO%20APROVAÇÃO-yellowgreen)
+
+Parte 2 do projeto(Final):
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-PENDENTE-red)
 
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
 
