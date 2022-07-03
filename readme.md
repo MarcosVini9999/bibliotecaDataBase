@@ -28,6 +28,10 @@ Slide de apresentação:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO%2C%20AGUARDANDO%20APROVAÇÃO-yellowgreen)
 
+Parte 2 do projeto(Final):
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-PENDENTE-red)
+
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
 
 ## 🌎Descrição Geral:
