@@ -41,6 +41,7 @@ class LivroRepository extends ServiceEntityRepository
         $conn = $this->getEntityManager()->getConnection();
 
         $sql = 'SELECT * FROM livros WHERE isbn = :isbn limit 1';
+
         $stmt = $conn->prepare($sql);
         $resultSet = $stmt->executeQuery(['isbn' => $isbn]);
 
@@ -50,12 +51,29 @@ class LivroRepository extends ServiceEntityRepository
     function store($livro)
     {
         $conn = $this->getEntityManager()->getConnection();
-        $erros = '';
+
         $sql = 'INSERT 
                     INTO 
                         livros (isbn, titulo, ano_lancamento, editora, qtd_copias, categorias_cod_categoria) 
                 VALUES 
                     (:isbn, :titulo, :ano_lancamento, :editora, :qtd_copias, :categorias_cod_categoria)';
+        $stmt = $conn->prepare($sql);
+        if (!$stmt->executeQuery($livro)) {
+            throw new Exception('Não foi possível cadastrar');
+        }
+        return true;
+    }
+
+    function update($livro)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 'UPDATE 
+                    livros 
+                SET 
+                    isbn=:isbn, titulo=:titulo, ano_lancamento=:ano_lancamento, editora=:editora, qtd_copias=:qtd_copias, categorias_cod_categoria=:categorias_cod_categoria
+                WHERE isbn=:isbn';
+
         $stmt = $conn->prepare($sql);
         if (!$stmt->executeQuery($livro)) {
             throw new Exception('Não foi possível cadastrar');
