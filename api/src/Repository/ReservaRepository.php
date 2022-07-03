@@ -18,7 +18,7 @@ class ReservaRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Professor::class);
+        parent::__construct($registry, Reserva::class);
     }
 
     function reservarLivro($data)
