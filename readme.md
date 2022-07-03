@@ -16,6 +16,12 @@ Parte 1 do projeto:
 
 Implementações Finais:
 
+Front End
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
+
+Back End
+
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
 
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
