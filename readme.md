@@ -10,6 +10,10 @@ Modelagem e scripts:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
 
+Parte 1 do projeto:
+
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-ENVIADO-brightgreen)
+
 Implementações Finais:
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO%20-yellow)
