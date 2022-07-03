@@ -50,7 +50,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/livros?query=valor",
+					"raw": "http://localhost:8080/livros?query=%C3%A7%C3%A3o",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -62,7 +62,7 @@
 					"query": [
 						{
 							"key": "query",
-							"value": "valor"
+							"value": "%C3%A7%C3%A3o"
 						}
 					]
 				}
@@ -149,6 +149,62 @@
 					"port": "8080",
 					"path": [
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"matricula\": 385101,\n    \"data_de_ingresso\": \"2016-03-03\",\n    \"data_de_conclusao_prevista\": \"2016-03-03\",\n    \"cursos_cod_curso\": 1,\n    \"nome\": \"João Victor\",\n    \"email\": \"victor@alu.br\",\n    \"senha\": \"12345678\",\n    \"endereco\": \"caveira\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/alunos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Professor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mat_siape\": 385104,\n    \"regime_trabalho\": \"40h\",\n    \"telefone_celular\": \"88888888888\",\n    \"data_contratacao\": \"2022-03-30\",\n    \"cursos_cod_curso\": 1,\n    \"nome\": \"João Victor 2\",\n    \"email\": \"victor@alu.br\",\n    \"senha\": \"12345678\",\n    \"endereco\": \"caveira\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/professores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"professores"
 					]
 				}
 			},
