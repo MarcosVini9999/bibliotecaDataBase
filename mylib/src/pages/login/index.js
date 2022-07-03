@@ -1,24 +1,23 @@
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import api from "../../services/shared/api";
 import "./style.css";
 
 function Login() {
-  const navigate = useNavigate();
+  const navigate = useHistory();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signin = async (email, password) => {
-    const response = await api.post("/signin", {email, password});
-    return response.data;
-  };
   const handleLogin = async () => {
-    if (email && password) {
-      const isLogged = await signin(email, password);
-      if (isLogged) {
-        navigate("/");
-      } else {
+    if (!email || !password) {
+      alert("email e senha obrigatorios");
+    } else {
+      try {
+        const response = await api.post("/login", {email, password});
+        localStorage.setItem("user", response.data);
+        navigate.push("/home");
+      } catch {
         alert("Senha ou E-mail incorreto(a)");
       }
     }
