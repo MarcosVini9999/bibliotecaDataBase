@@ -2,20 +2,32 @@
 
 namespace App\Controller;
 
+use App\Entity\Professor;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProfessorController extends AbstractController
 {
     /**
-     * @Route("/professores", name="app_professor")
+     * @Route("/professores", methods={"POST"})
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ProfessorController.php',
-        ]);
+        $data = json_decode($request->getContent());
+
+        $data->senha = md5($data->senha);
+        $data->tipo_usuario = 'Usuário';
+
+        $repository = $this->getDoctrine()->getRepository(Professor::class);
+        try {
+            $repository->salvarProfessor($data);
+        } catch (Exception $e) {
+            return new JsonResponse(['success' => false, 'data' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+        return new JsonResponse(['success' => true]);
     }
 }
