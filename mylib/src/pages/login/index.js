@@ -7,14 +7,14 @@ function Login() {
   const navigate = useHistory();
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [senha, setSenha] = useState("");
 
   const handleLogin = async () => {
-    if (!email || !password) {
+    if (!email || !senha) {
       alert("email e senha obrigatorios");
     } else {
       try {
-        const response = await api.post("/login", {email, password});
+        const response = await api.post("/login", {email, senha});
         localStorage.setItem("user", response.data);
         navigate.push("/home");
       } catch {
@@ -34,8 +34,8 @@ function Login() {
       />
       <input
         type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        value={senha}
+        onChange={(e) => setSenha(e.target.value)}
         placeholder="Senha"
       />
       <button onClick={handleLogin}>ENTRAR</button>
