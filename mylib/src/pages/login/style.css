@@ -47,3 +47,13 @@ h1{
     color: #004B87;
     font-size: 14px;
 }
+
+.userIconEdit{
+    font-size: 200px !important;
+}
+
+.centralizarLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
