@@ -1,0 +1,16 @@
+body{
+    background: white;
+}
+.estiloLogin{
+background-color: gray;
+max-width: 400px;
+min-width: 400px;
+box-sizing: border-box;
+background: rgba(255, 255, 255, 0.6);
+box-shadow: 4px 2px 16px rgba(0, 0, 0, 0.4);
+border-radius: 8px;
+margin: 20px auto 0 auto;
+padding: 25px;
+color: black;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
