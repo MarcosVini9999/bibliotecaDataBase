@@ -32,7 +32,8 @@ function Login() {
     }
   };
   return (
-    <div>
+    <div className="estiloLogin">
+      <div>
       <h1>LOGIN</h1>
 
       <input
@@ -48,6 +49,7 @@ function Login() {
         placeholder="Senha"
       />
       <button onClick={handleLogin}>ENTRAR</button>
+    </div>
     </div>
   );
 }
