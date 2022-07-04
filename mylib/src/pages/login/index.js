@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom";
 import api from "../../services/shared/api";
 import "./style.css";
 
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Login() {
   const navigate = useHistory();
@@ -34,32 +34,32 @@ function Login() {
     }
   };
   return (
-    <div className="estiloLogin">
-      <div className="centralizarLogin">   
-      <AccountCircleIcon
-        classes={{ root: 'userIconEdit' }} 
-
-      />
-      <h1 className="letrasLoginTopo">LOGIN</h1>
+    <div className="containerLogin">
+      <div className="estiloLogin">
+        <div className="centralizarLogin">
+          <AccountCircleIcon classes={{root: "userIconEdit"}} />
+          <h1 className="letrasLoginTopo">LOGIN</h1>
+        </div>
+        <p className="textoEmailSuperior">Digite o e-mail:</p>
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E-mail"
+        />
+        <p className="textoSenhaSuperior">Digite o senha:</p>
+        <input
+          type="password"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          placeholder="Senha"
+        />
+        <br></br>
+        <button className="buttonEstilo" onClick={handleLogin}>
+          ENTRAR
+        </button>
       </div>
-      <p className="textoEmailSuperior">Digite o e-mail:</p>
-      <input
-        type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="E-mail"
-      />
-      <p className="textoSenhaSuperior">Digite o senha:</p>
-      <input
-        type="password"
-        value={senha}
-        onChange={(e) => setSenha(e.target.value)}
-        placeholder="Senha"
-      />
-      <br></br>
-      <button className="buttonEstilo" onClick={handleLogin}>ENTRAR</button>
     </div>
-    
   );
 }
 export default Login;

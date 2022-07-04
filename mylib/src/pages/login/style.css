@@ -1,59 +1,70 @@
-body{
-    background: #004B87;
+body {
+  background: #004b87;
 }
-.estiloLogin{
-background-color: gray;
-max-width: 400px;
-min-width: 400px;
-box-sizing: border-box;
-background: rgba(255, 255, 255, 0.6);
-box-shadow: 4px 2px 16px rgba(0, 0, 0, 0.4);
-border-radius: 8px;
-margin: 200px auto 0 auto;
-padding: 25px;
-color: black;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+.containerLogin {
+  display: flex;
+  max-width: 100%;
+  height: 97.5vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.letrasLoginTopo{
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0;
-    color: #0E166CFF;
-}
-
-h1{
-    display: block;
-    margin-block-start: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.estiloLogin {
+  background-color: gray;
+  max-width: 400px;
+  min-width: 400px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 4px 2px 16px rgb(0 0 0 / 40%);
+  padding: 25px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
 }
 
-.buttonEstilo{
-    margin: 15px;
-    margin-inline-start: 40px;
-    padding: 5px;
-    padding-left: 100px;
-    padding-right: 100px;
+.letrasLoginTopo {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #0e166cff;
 }
 
-.textoSenhaSuperior{
-    color: #004B87;
-    font-size: 14px;
+h1 {
+  display: block;
+  margin-block-start: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
-.textoEmailSuperior{
-    color: #004B87;
-    font-size: 14px;
+.buttonEstilo {
+  padding: 5px 5px 5px 5px;
+  border-radius: 8px;
+  border: none;
+}
+.buttonEstilo:hover {
+  background-color: gray;
 }
 
-.userIconEdit{
-    font-size: 200px !important;
+.textoSenhaSuperior {
+  color: #004b87;
+  font-size: 14px;
 }
 
-.centralizarLogin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.textoEmailSuperior {
+  color: #004b87;
+  font-size: 14px;
+}
+
+.userIconEdit {
+  font-size: 200px !important;
+}
+
+.centralizarLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
