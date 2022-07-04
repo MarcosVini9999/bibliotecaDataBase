@@ -34,23 +34,26 @@ function Login() {
   return (
     <div className="estiloLogin">
       <div>
-      <h1>LOGIN</h1>
-
+      <h1 className="letrasLoginTopo">LOGIN</h1>
+      </div>
+      <p className="textoEmailSuperior">Digite o e-mail:</p>
       <input
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="E-mail"
       />
+      <p className="textoSenhaSuperior">Digite o senha:</p>
       <input
         type="password"
         value={senha}
         onChange={(e) => setSenha(e.target.value)}
         placeholder="Senha"
       />
-      <button onClick={handleLogin}>ENTRAR</button>
+      <br></br>
+      <button className="buttonEstilo" onClick={handleLogin}>ENTRAR</button>
     </div>
-    </div>
+    
   );
 }
 export default Login;
