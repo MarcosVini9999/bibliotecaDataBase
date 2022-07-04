@@ -15,8 +15,17 @@ function Login() {
     } else {
       try {
         const response = await api.post("/login", {email, senha});
+        if (response.data.user.tipo_usuario === "Administrador") {
+          navigate.push("/homeADM");
+        } else {
+          if (response.data.user.tipo_usuario === "Bibliotecário") {
+            navigate.push("/homeLIB");
+          } else {
+            navigate.push("/home");
+          }
+        }
         localStorage.setItem("user", response.data);
-        navigate.push("/home");
+        console.log(response.data.user.tipo_usuario);
       } catch {
         alert("Senha ou E-mail incorreto(a)");
       }
