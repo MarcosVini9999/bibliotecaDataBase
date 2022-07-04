@@ -3,6 +3,8 @@ import {useHistory} from "react-router-dom";
 import api from "../../services/shared/api";
 import "./style.css";
 
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 function Login() {
   const navigate = useHistory();
 
@@ -33,7 +35,11 @@ function Login() {
   };
   return (
     <div className="estiloLogin">
-      <div>
+      <div className="centralizarLogin">   
+      <AccountCircleIcon
+        classes={{ root: 'userIconEdit' }} 
+
+      />
       <h1 className="letrasLoginTopo">LOGIN</h1>
       </div>
       <p className="textoEmailSuperior">Digite o e-mail:</p>
