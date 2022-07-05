@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Reserva;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Exception;
 
 /**
  * @extends ServiceEntityRepository<Reserva>
@@ -23,6 +24,10 @@ class ReservaRepository extends ServiceEntityRepository
 
     function reservarLivro($data)
     {
+        if(!$this->verificarDisponiveis($data->livros_isbn)) {
+            throw new Exception("Sem livros disponíveis para reservar");
+        }
+
         $conn = $this->getEntityManager()->getConnection();
 
         try {
@@ -45,5 +50,28 @@ class ReservaRepository extends ServiceEntityRepository
             throw $e;
         }
         return true;
+    }
+
+    function verificarDisponiveis($isbn)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = "SELECT qtd_copias - (SELECT count(*)
+            FROM usuarios_reserva_livros url
+            WHERE data_devolucao IS NULL
+            AND l.isbn = url.livros_isbn) AS disponiveis
+            FROM livros l WHERE isbn = :isbn";
+
+        $stmt = $conn->prepare($sql);
+        $resultSet = $stmt->executeQuery([
+            'isbn' => $isbn
+        ]);
+
+        $qtdDisponiveis =  intval($resultSet->fetchAssociative()['disponiveis']);
+        if ($qtdDisponiveis > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
