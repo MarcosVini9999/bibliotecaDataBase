@@ -32,6 +32,45 @@ Parte 2 do projeto(Final):
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-PENDENTE-red)
 
+## Requisitos
+- node v16.14.2
+- npm v8.13.1
+- php v7.4.3
+- mysql v8.0 
+- composer 2.2.5
+
+## Instruções para inicializar o projeto
+```
+git clone https://github.com/carloseduardo-ts/TrabalhoBD-2022_1-Equipe385101
+```
+
+```
+cd TrabalhoBD-2022_1-Equipe385101
+```
+
+```
+cd api 
+```
+
+```
+composer update 
+```
+
+```
+php -S localhost:8080 -t public
+```
+
+```
+cd ../mylib
+```
+
+```
+npm i
+```
+
+```
+npm start
+```
 # 📚BIBLIOTECA UNIVERSITÁRIA📖
 
 ## 🌎Descrição Geral:
